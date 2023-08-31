@@ -33,8 +33,9 @@ Vagrant.configure("2") do |config|
 
   # config.vm.synced_folder "/home/mogleson/Área de Trabalho/iTalent/Atividades/vagrant/projeto-01", "./dir-compartilhado"
 
-  config.vm.network "private_network", ip: "192.168.0.3"
-  config.vm.network "private_network", ip: "10.10.1.100"
+  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "public_network", ip: "192.168.0.3"
+  config.vm.network "public_network", ip: "10.10.1.100"
 
 end
 
